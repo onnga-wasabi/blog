@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Archive
+title: Tags
 ---
 
 <div>
 
-  <h2>Posts</h2>
+  <h2>Tags</h2>
 
   <section class="archive_list">
-    {% for category in site.categories %}
+    {% for tag in site.tags %}
 
     <div class="category-name">
-      <h2>{{ category | first }}</h2>
+      <h2 id="{{ tag | first }}">{{ tag | first }}</h2>
     </div>
-      {% for post in category.last %}
+      {% for post in tag.last %}
 
       <div class="post_title">
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a>
