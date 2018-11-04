@@ -13,8 +13,12 @@ layout: default
   </div>
 
   <footer class="article-footer">
-
-  <data data-icon="ei-archive"></data> {{ page.category }}
+  
+  {% for tag in page.tags %}
+    <a href="{{ "/tags" | prepend: site.baseurl }}#{{ tag }}">
+    <data data-icon="ei-archive"></data> {{ tag }}
+    </a>
+  {% endfor %}
 
   <hr/>
 
